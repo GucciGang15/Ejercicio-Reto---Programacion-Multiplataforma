@@ -1,3 +1,6 @@
+git clone https://github.com/GucciGang15/Ejercicio-Reto---Programacion-Multiplataforma.git
+
+
 # Actualizar repositorios e instalar paquetes del sistema necesarios
 sudo apt update
 sudo apt install -y python3-pip python3-venv python3-tk build-essential
@@ -13,7 +16,7 @@ pip install --upgrade pip
 pip install ttkbootstrap pyinstaller
 
 GENERAR EJECUTABLE
-pyinstaller --noconfirm --onedir --windowed --name "CalculadoraJubilacion" main.py
+pyinstaller --noconfirm --onedir --windowed --name "CalculadoraJubilacion" --collect-all ttkbootstrap --collect-submodules PIL main.py
 
 PROBAR EJECUTABLE
 # Dar permisos de ejecución al binario
@@ -21,3 +24,9 @@ chmod +x dist/CalculadoraJubilacion/CalculadoraJubilacion
 
 # Lanzar la aplicación
 ./dist/CalculadoraJubilacion/CalculadoraJubilacion
+
+
+python3 -m venv .venv
+source .venv/bin/activate
+pip install ttkbootstrap pyinstaller
+
